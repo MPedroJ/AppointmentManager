@@ -1,0 +1,40 @@
+.appointmentBox {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #586f7c;
+    border-radius: 3px;
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+    color: #586f7c;
+    font-size: 1.5rem;
+    margin-right: 4rem;
+    padding: 1.2rem;
+    box-shadow: 0 0 10px #717a97;
+}
+
+.appointmentBox span {
+    margin-bottom: .5rem;
+}
+
+.active {
+    color: green;
+}
+
+.cancelled {
+    color: red;
+}
+
+.cancelButton {
+    color: #b8dbd9;
+    background: transparent;
+    border: 1px solid #586f7c;
+    width: 50%;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.cancelButton:hover {
+    background-color: #586f7c;
+    transition: .3s;
+}

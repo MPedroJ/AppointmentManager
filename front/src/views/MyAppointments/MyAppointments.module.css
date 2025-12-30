@@ -1,0 +1,34 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: 2.5rem;
+    color: #586f7c;
+    margin-top: 1rem;
+}
+
+.newTurnButton {
+    font-size: 1.3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #b8dbd9; 
+    border-radius: .2rem;
+}
+
+.newTurnButton:hover {
+    background-color: #586f7c;
+    transition: .3s;
+}
+
+
+.cardContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}

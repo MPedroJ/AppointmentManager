@@ -1,0 +1,9 @@
+.headerBox{
+    height: 12%;
+    border-bottom: 1px solid #586f7c;
+}
+
+header{
+      display: flex;
+      justify-content: space-around;
+}

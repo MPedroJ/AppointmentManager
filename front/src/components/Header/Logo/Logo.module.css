@@ -1,0 +1,10 @@
+.logo{
+    height: fit-content;
+    width: fit-content;
+    margin: 1rem;
+}
+
+.logo img {
+    height: 3.5rem;
+    border-radius: 9px;
+}
