@@ -118,3 +118,52 @@ Note: `back/rutas.md` uses some legacy naming like `/turns`. In the current code
 - `GET /appointments/user/:id`
 - `POST /appointments/schedule`
 - `PUT /appointments/cancel/:id`
+
+## Deployment (single service: backend serves frontend)
+
+This repo is prepared to deploy **frontend + backend in one Node service**:
+
+- The frontend uses relative API calls like `/users/login`.
+- In production, the backend serves the React build from `front/dist`.
+
+### Build + start (recommended)
+
+A root `package.json` was added using npm workspaces.
+
+From the repository root:
+
+- Install: `npm install`
+- Build: `npm run build`
+- Start: `npm start`
+
+Typical platforms (Render/Railway/Fly/etc.) can use:
+
+- **Build command**: `npm install && npm run build`
+- **Start command**: `npm start`
+
+### Required environment variables
+
+Set these in your hosting provider:
+
+- `NODE_ENV=production`
+- `PORT` (most platforms inject this automatically)
+
+Database:
+
+- `HOST_DB`
+- `PORT_DB`
+- `USERNAME_DB`
+- `PASSWORD_DB`
+- `DB_NAME`
+
+TypeORM schema flags (recommended for production):
+
+- `DB_SYNCHRONIZE=false`
+- `DB_DROP_SCHEMA=false`
+
+### Local development
+
+- Run the backend on `http://localhost:3000`
+- Run the frontend with `npm run dev` inside `front/`
+
+Vite is configured to proxy `/users` and `/appointments` to `http://localhost:3000` during development.

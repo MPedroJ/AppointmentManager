@@ -12,7 +12,7 @@ const Register = () => {
       validate={validateRegister}
       onSubmit={async (values, { resetForm }) => {
         try {
-          const response = await axios.post('http://localhost:3000/users/register', values);
+          const response = await axios.post('/api/users/register', values);
           if (response.status === 201) {
             alert(`Usario ${values.username} creado con exito!`);
           }

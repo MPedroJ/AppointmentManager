@@ -24,7 +24,7 @@ const ScheduleAppointment = () => {
             userId: user.newLogin.id,
           };
 
-          const response = await axios.post('http://localhost:3000/appointments/schedule', scheduleData);
+          const response = await axios.post('/api/appointments/schedule', scheduleData);
 
           if (response.status === 201) {
             alert(`Turno agendado para el dia ${values.date}`);

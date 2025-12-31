@@ -11,6 +11,7 @@ const initializeApp = async () => {
   // await preloadAppointmentData()
   server.listen(PORT, () => {
     console.log(`The server is listening on the PORT ${PORT}`);
+    console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
   });
 };
 

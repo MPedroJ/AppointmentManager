@@ -1,0 +1,12 @@
+{
+  "name": "appointment-manager",
+  "private": true,
+  "workspaces": [
+    "front",
+    "back"
+  ],
+  "scripts": {
+    "build": "npm --workspace front run build && npm --workspace back run build",
+    "start": "npm --workspace back start"
+  }
+}

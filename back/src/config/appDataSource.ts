@@ -2,7 +2,7 @@ import { DataSource } from 'typeorm';
 import { User } from '../entities/User';
 import { Credential } from '../entities/Credential';
 import { Appointment } from '../entities/Appointment';
-import { DB_NAME, HOST_DB, PASSWORD_DB, PORT_DB, USERNAME_DB } from './envs';
+import { DB_DROP_SCHEMA, DB_NAME, DB_SYNCHRONIZE, HOST_DB, PASSWORD_DB, PORT_DB, USERNAME_DB } from './envs';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
@@ -11,8 +11,8 @@ export const AppDataSource = new DataSource({
   username: USERNAME_DB,
   password: PASSWORD_DB,
   database: DB_NAME,
-  dropSchema: true,
-  synchronize: true,
+  dropSchema: DB_DROP_SCHEMA,
+  synchronize: DB_SYNCHRONIZE,
   logging: false,
   entities: [User, Credential, Appointment],
   subscribers: [],
